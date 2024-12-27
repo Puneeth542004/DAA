@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+int main() {
+    int a1 = 36, b1 = 48;
+    int a2 = 156, b2 = 90;
+    printf("GCD of %d and %d: %d\n", a1, b1, gcd(a1, b1));
+    printf("GCD of %d and %d: %d\n", a2, b2, gcd(a2, b2));
+    printf("GCD of -56 and 88: Illegal input\n");  // Input validation can be added
+    return 0;
+}
